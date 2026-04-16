@@ -1,0 +1,424 @@
+/* ============================================
+   ENCICLOPÉDIA DAS COPAS DO MUNDO
+   Design System - Copa do Mundo
+   ============================================ */
+
+:root {
+  /* Cores - Tema Copa do Mundo */
+  --primary-gold: #FFD700;
+  --primary-blue: #0052CC;
+  --primary-white: #FFFFFF;
+  --primary-black: #1A1A1A;
+  --accent-green: #00A651;
+  --accent-yellow: #FCD116;
+  --accent-red: #CE1126;
+  
+  /* Tons Neutros */
+  --gray-light: #F5F5F5;
+  --gray-medium: #CCCCCC;
+  --gray-dark: #333333;
+  
+  /* Tipografia */
+  --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  /* Espaçamento */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Sombras */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Reset e Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--primary-white);
+  color: var(--primary-black);
+  line-height: 1.6;
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--primary-black);
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+  color: var(--primary-blue);
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+  font-size: 1rem;
+}
+
+a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-green);
+  text-decoration: underline;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* Header e Navegação */
+header {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #003d99 100%);
+  color: var(--primary-white);
+  padding: var(--spacing-md) 0;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  color: var(--primary-blue);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--primary-white);
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  color: var(--primary-gold);
+  border-bottom-color: var(--primary-gold);
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #003d99 100%);
+  color: var(--primary-white);
+  padding: var(--spacing-xl) 0;
+  text-align: center;
+}
+
+.hero h1 {
+  color: var(--primary-white);
+  margin-bottom: var(--spacing-md);
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-lg);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Main Content */
+main {
+  min-height: calc(100vh - 200px);
+  padding: var(--spacing-xl) 0;
+}
+
+section {
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Cards */
+.card {
+  background: var(--primary-white);
+  border: 1px solid var(--gray-medium);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+/* Tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+th {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #003d99 100%);
+  color: var(--primary-white);
+  padding: var(--spacing-md);
+  text-align: left;
+  font-weight: 700;
+}
+
+td {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--gray-light);
+}
+
+tr:hover {
+  background-color: var(--gray-light);
+}
+
+/* Listas */
+ul, ol {
+  margin-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+li {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: var(--primary-blue);
+  color: var(--primary-white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #003d99;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background: var(--accent-green);
+}
+
+.btn-secondary:hover {
+  background: #008040;
+}
+
+/* Formulário */
+form {
+  max-width: 600px;
+  margin: var(--spacing-lg) auto;
+}
+
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+  color: var(--primary-black);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--gray-medium);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.1);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Galeria de Fotos */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Footer */
+footer {
+  background: var(--primary-black);
+  color: var(--primary-white);
+  padding: var(--spacing-lg) 0;
+  margin-top: var(--spacing-xl);
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: var(--spacing-sm);
+}
+
+footer a {
+  color: var(--primary-gold);
+}
+
+footer a:hover {
+  color: var(--primary-white);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  nav ul {
+    gap: var(--spacing-md);
+  }
+  
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  table {
+    font-size: 0.9rem;
+  }
+  
+  th, td {
+    padding: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+}
