@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de contato - Enciclopédia das Copas do Mundo">
+    <title>Contato - Enciclopédia das Copas do Mundo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">⚽</div>
+                    <span>Copa do Mundo</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="historia.html">História</a></li>
+                        <li><a href="campeoes.html">Campeões</a></li>
+                        <li><a href="fotos.html">Fotos</a></li>
+                        <li><a href="links.html">Links</a></li>
+                        <li><a href="brasil.html">Brasil</a></li>
+                        <li><a href="artilheiros.html">Artilheiros</a></li>
+                        <li><a href="curiosidades.html">Curiosidades</a></li>
+                        <li><a href="futuras.html">Futuras</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Entre em Contato</h1>
+            <p>Envie-nos sua mensagem, dúvida ou sugestão</p>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <section>
+                <h2>Formulário de Contato</h2>
+                <p>Preencha o formulário abaixo para entrar em contato conosco:</p>
+                
+                <form id="formulario-contato" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone (opcional):</label>
+                        <input type="tel" id="telefone" name="telefone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assunto">Assunto:</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="duvida">Dúvida</option>
+                            <option value="sugestao">Sugestão</option>
+                            <option value="correcao">Correção</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+            </section>
+
+            <section>
+                <h2>Informações de Contato</h2>
+                <p>Este é um trabalho acadêmico desenvolvido para a disciplina de Tecnologias para Internet.</p>
+                
+                <h3>Dados do Projeto</h3>
+                <ul>
+                    <li><strong>Instituição:</strong> Uniube (Universidade de Uberaba)</li>
+                    <li><strong>Disciplina:</strong> Tecnologias para Internet</li>
+                    <li><strong>Professor:</strong> Joabe Fuzaro</li>
+                    <li><strong>Tema:</strong> Enciclopédia das Copas do Mundo</li>
+                </ul>
+                
+            </section>
+
+            <section>
+                <h2>Páginas do Site</h2>
+                <p>O site contém as seguintes 10 páginas:</p>
+                <ol>
+                    <li>index.html - Página Inicial</li>
+                    <li>historia.html - História das Copas</li>
+                    <li>campeoes.html - Campeões Mundiais</li>
+                    <li>fotos.html - Galeria de Fotos</li>
+                    <li>links.html - Links Úteis</li>
+                    <li>brasil.html - Brasil nas Copas</li>
+                    <li>artilheiros.html - Maiores Artilheiros</li>
+                    <li>curiosidades.html - Curiosidades</li>
+                    <li>futuras.html - Copas Futuras</li>
+                    <li>contato.html - Página de Contato</li>
+                </ol>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 - Enciclopédia das Copas do Mundo</p>
+            <p>Trabalho acadêmico - Disciplina: Tecnologias para Internet</p>
+            <p>Professor: Joabe Fuzaro | Instituição: Uniube</p>
+            <p><strong>Aluno:</strong> [Seu Nome] | <strong>RA:</strong> [Seu RA]</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script para validação básica do formulário
+        document.getElementById('formulario-contato').addEventListener('submit', function(e) {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const mensagem = document.getElementById('mensagem').value;
+            
+            if (nome.trim() === '' || email.trim() === '' || mensagem.trim() === '') {
+                alert('Por favor, preencha todos os campos obrigatórios!');
+                e.preventDefault();
+            } else {
+                alert('Mensagem enviada com sucesso! Obrigado pelo contato.');
+            }
+        });
+    </script>
+</body>
+</html>
